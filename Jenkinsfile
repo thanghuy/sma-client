@@ -9,14 +9,14 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'npm install'
-                bat "npm run build"
+                sh 'npm install'
+                sh "npm run build"
             }
         }
         stage('Deploy') {
             steps {
-                bat 'del -rf /var/www/react'
-                bat "cp -r ${WORKSPACE}/dist/ /var/www/react"
+                sh 'del -rf /var/www/react'
+                sh "cp -r ${WORKSPACE}/dist/ /var/www/react"
             }
         }
     }
