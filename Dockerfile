@@ -1,6 +1,6 @@
 # build stage
 
-FROM node:latest as build-stage
+FROM node:alpine as build-stage
 
 #aslo say
 
