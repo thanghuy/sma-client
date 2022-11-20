@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'yarn install'
-                sh "yarn run build"
+                sh "yarn build"
             }
         }
         stage('Deploy') {
