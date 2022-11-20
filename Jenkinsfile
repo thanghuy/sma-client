@@ -9,8 +9,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'sudo rm -r /var/www/react'
-                sh "sudo cp -r ${WORKSPACE}/dist/ /var/www/react"
+                sh 'rm -r /var/www/react'
+                sh "cp -r ${WORKSPACE}/dist/ /var/www/react"
             }
         }
     }
