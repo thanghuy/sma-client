@@ -7,12 +7,6 @@ pipeline {
                 git 'https://github.com/thanghuy/web-deploy.git'
             }
         }
-        stage('Build') {
-            steps {
-                sh 'yarn install'
-                sh "yarn build"
-            }
-        }
         stage('Deploy') {
             steps {
                 sh 'del -rf /var/www/react'
