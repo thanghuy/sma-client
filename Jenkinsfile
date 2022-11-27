@@ -9,8 +9,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'rm -rf /var/www/react/html/*'
-                sh "cp -r ${WORKSPACE}/dist/* /var/www/react/html"
+                sh 'rm -rf /usr/share/nginx/html/*'
+                sh "cp -r ${WORKSPACE}/dist/* /usr/share/nginx/html"
             }
         }
     }
