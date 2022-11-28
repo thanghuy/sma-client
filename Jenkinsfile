@@ -7,11 +7,16 @@ pipeline {
                 git 'https://github.com/thanghuy/web-deploy.git'
             }
         }
+        stage('Build') {
+            steps {
+                bat 'npm install'
+                bat "npm run build"
+            }
+        }
         stage('Deploy') {
             steps {
-                sh "chmod +x -R ${env.WORKSPACE}"
-                sh 'rm -rf /var/www/react/html/*'
-                sh "cp -r ${WORKSPACE}/dist/* /var/www/react/html"
+                bat 'del -rf /var/www/react/html'
+                bat "cp -r ${WORKSPACE}/dist/ /var/www/react/html"
             }
         }
     }
