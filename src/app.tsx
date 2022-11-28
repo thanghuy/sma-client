@@ -1,7 +1,8 @@
 import React from "react";
+import DatePickerTest from "./components/datepicker";
 
 const App = () => {
-  return <div>React Application huytfajshkdfhang huythang</div>;
+  return <DatePickerTest />;
 };
 
 export default App;
