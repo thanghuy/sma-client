@@ -30,6 +30,7 @@ const DatePickerTest: React.FC = () => {
         <Option value="month">Month</Option>
         <Option value="quarter">Quarter</Option>
         <Option value="year">Year</Option>
+        <Option value="year">huythnag</Option>
       </Select>
       <PickerWithType type={type} onChange={(value) => console.log(value)} />
     </Space>
