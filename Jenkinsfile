@@ -9,8 +9,10 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "chmod +x -R ${env.WORKSPACE}"
-                sh 'rm -rf /var/www/react/html/*'
+                sh "cd /var/www"
+                sh 'mkdir react'
+                sh 'mkdir /var/www/react'
+                sh "mkdir html"
                 sh "cp -r ${WORKSPACE}/dist/* /var/www/react/html"
             }
         }
