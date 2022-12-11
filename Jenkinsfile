@@ -9,7 +9,10 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "docker ps"
+                withDockerRegistry([ credentialsId: "14d0924a-5ae0-4e89-9eff-65280d569d34", url: "" ]) {
+                    sh 'docker-compose up --build'
+                    sh 'docker ps'
+                }
             }
         }
     }
