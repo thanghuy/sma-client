@@ -9,8 +9,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "docker-compose up -d --build"
-                sh "docker ps"
+                sh "sudo docker-compose up -d --build"
+                sh "sudo docker ps"
             }
         }
     }
