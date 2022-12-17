@@ -7,6 +7,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',
+    publicPath: "/"
   },
   plugins: require('./webpack.plugins'),
   resolve: {
@@ -18,6 +19,7 @@ module.exports = {
   devServer: {
     port: 4000,
     open: true,
+    historyApiFallback: true
   },
   optimization: {
     splitChunks: {

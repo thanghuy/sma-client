@@ -1,8 +1,10 @@
 import React from "react";
-import DatePickerTest from "./components/datepicker";
+import RouterRoot from "./router/router";
+import 'antd/dist/reset.css';
+import './index.css';
 
 const App = () => {
-  return <DatePickerTest />;
+  return <RouterRoot />;
 };
 
 export default App;
