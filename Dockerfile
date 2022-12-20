@@ -3,8 +3,8 @@ FROM node:lts AS build
 # Set working directory
 WORKDIR /app
 COPY . /app/
-#RUN npm install
-#RUN npm run build
+RUN npm install
+RUN npm run build
 # 2. For Nginx setup
 FROM nginx:alpine
 # Copy config nginx
